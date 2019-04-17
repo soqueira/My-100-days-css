@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>square</title>
   <link rel="stylesheet" href="square.css">
 </head>
 
@@ -12,66 +12,8 @@
     <div class="square"></div>
   </div>
   <div class="shadow"></div>
-  <script src='node_modules/animejs/lib/anime.js'></script>
-  <script>
-    anime({
-      targets: '.square',
-
-      translateY: [{
-        value: -150,
-        duration: 500,
-        easing: 'easeOutExpo'
-      }, {
-        value: 0,
-        duration: 500,
-        easing: 'easeInQuad'
-      }],
-      rotate: [{
-        value: 180,
-        duration: 1550,
-        easing: 'easeOutExpo'
-      }],
-      height: [{
-        value: 200,
-        duration: 250,
-        delay: 500,
-        easing: 'linear'
-      }, {
-        value: 100,
-        duration: 350,
-        delay: 250,
-        easing: 'linear'
-      }, {
-        value: 200,
-        duration: 350,
-        delay: 50,
-        easing: 'linear'
-      }],
-      scaleX: [{
-        value: 1.8,
-        duration: 350,
-        delay: 1000
-      }, {
-        value: 1,
-        duration: 350,
-        delay: 50
-      }],
-
-      easing: 'linear',
-      loop: true
-    });
-    anime({
-      targets: '.shadow',
-      scaleX: [{
-        value: .5
-      }, {
-        value: 1
-      }],
-      easing: 'easeOutExpo',
-      duration: 1750,
-      loop: true
-    });
-  </script>
+  <script src='../node_modules/animejs/lib/anime.js'></script>
+  <script src='square.js'></script>
 </body>
 
 </html>
