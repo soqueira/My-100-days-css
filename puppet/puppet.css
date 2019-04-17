@@ -1,0 +1,143 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.doll {
+  width: 200px;
+  height: 400px;
+  background: black;
+  position: absolute;
+}
+
+.head {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.body {
+  width: 70px;
+  height: 130px;
+  background: white;
+  position: absolute;
+  top: 60px;
+  transform: translate(-10%);
+  border-radius: 5px;
+}
+
+.body::after {
+  content: '';
+  width: 34px;
+  height: 120px;
+  position: absolute;
+  background: white;
+  left: 0;
+  top: 90%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.body::before {
+  content: '';
+  width: 34px;
+  height: 120px;
+  position: absolute;
+  background: white;
+  right: 0;
+  top: 90%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.hand_left {
+  width: 24px;
+  height: 50px;
+  background: white;
+  transform: rotate(20deg);
+  border-top-left-radius: 10px;
+  position: absolute;
+  left: -10px;
+}
+
+.hand_left::after {
+  content: '';
+  width: 24px;
+  height: 70px;
+  background: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  position: absolute;
+  top: 39px;
+  left: 4px;
+  transform: rotate(-10deg)
+}
+
+.hand_right {
+  width: 24px;
+  height: 65px;
+  background: white;
+  transform: rotate(100deg);
+  position: absolute;
+  right: -20px;
+  bottom: 83px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  animation: hand_shake 1s ease-in-out infinite alternate;
+}
+
+.hand_wave {
+  width: 24px;
+  height: 70px;
+  background: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: absolute;
+  transform: rotate(-3deg);
+  left: 85px;
+  top: -41px;
+  animation: hand_wave 1s ease-in-out infinite alternate;
+}
+
+@keyframes hand_shake {
+  from {
+    transform: rotate(118deg);
+    position: absolute;
+    right: -20px;
+    bottom: 76px;
+  }
+}
+
+@keyframes hand_wave {
+  from {
+    transform: rotate(45deg);
+    left: 104px;
+    top: -23px;
+  }
+}
