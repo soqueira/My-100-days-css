@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>end</title>
+  <link rel="stylesheet" href="end.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="end">
+      <div class="l-e">
+        <div class="onoff light left"></div>
+        <div class="onoff light top"></div>
+        <div class="onoff light mid"></div>
+        <div class="onoff light bottom"></div>
+      </div>
+      <div class="l-n">
+        <div class="onoff light left"></div>
+        <div class="onoff light mid"></div>
+        <div class="onoff light right"></div>
+      </div>
+      <div class="l-d">
+        <div class="onoff light left"></div>
+        <div class="right">
+          <div class="circleBox">
+            <div class="circle"></div>
+          </div>
+          <div class="topDotBox">
+            <div class="light dot"></div>
+          </div>
+          <div class="bottomDotBox">
+            <div class="light dot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="off">TURN OFF</button>
+    <button id="on">TURN ON</button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js" charset="utf-8"></script>
+  <script>
+    function turnOnOff() {
+      var light = document.querySelectorAll('.light');
+      $('#on').click(function() {
+        $('.onoff').addClass('anim_on');
+        $('.circle').addClass('anim_on_circle');
+        $('.dot').addClass('anim_on');
+        $('.onoff').removeClass('anim_off');
+        $('.circle').removeClass('anim_off_circle');
+        $('.dot').removeClass('anim_off');
+        $('#on').css('display', 'none');
+        $('#off').css('display', 'block');
+      });
+      $('#off').click(function() {
+        $('.onoff').removeClass('anim_on');
+        $('.circle').removeClass('anim_on_circle');
+        $('.dot').removeClass('anim_on');
+        $('#on').css('display', 'block');
+        $('.onoff').addClass('anim_off');
+        $('.circle').addClass('anim_off_circle');
+        $('.dot').addClass('anim_off');
+        $('#off').css('display', 'none');
+      });
+    }
+    turnOnOff();
+  </script>
+</body>
+
+</html>

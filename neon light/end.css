@@ -1,0 +1,266 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: black;
+  overflow: hidden;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.end {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.l-e {
+  width: 130px;
+  height: 120px;
+}
+
+.light {
+  border-radius: 4px;
+  background: #1A1E24;
+  box-shadow: 0px 0px 6px 0px #1A1E24;
+}
+
+.l-e .left {
+  width: 6px;
+  height: 120px;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 1s;
+}
+
+.l-e .top {
+  width: 6px;
+  height: 60px;
+  position: absolute;
+  left: 11%;
+  top: 29%;
+  transform: rotate(90deg)translate(-50%, -50%);
+  animation-delay: .5s;
+}
+
+.l-e .mid {
+  width: 6px;
+  height: 60px;
+  position: absolute;
+  left: 11%;
+  top: 43%;
+  transform: rotate(90deg)translate(-50%, -50%);
+  animation-delay: 2s;
+}
+
+.l-e .bottom {
+  width: 6px;
+  height: 60px;
+  position: absolute;
+  left: 11%;
+  top: 57%;
+  transform: rotate(90deg)translate(-50%, -50%);
+}
+
+.l-n {
+  width: 130px;
+  height: 120px;
+}
+
+.l-n .left {
+  width: 6px;
+  height: 120px;
+  position: absolute;
+  left: 41%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 1s;
+}
+
+.l-n .mid {
+  width: 6px;
+  height: 135px;
+  position: absolute;
+  left: 60%;
+  top: 47%;
+  transform: rotate(-30deg) translate(-50%, -50%);
+}
+
+.l-n .right {
+  width: 6px;
+  height: 120px;
+  position: absolute;
+  left: 62%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.l-d {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  left: 11px;
+}
+
+.l-d .left {
+  position: absolute;
+  left: 33px;
+  height: 120px;
+  width: 6px;
+}
+
+.l-d .right {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 0%;
+  transform: translate(50%, -50%);
+  height: 120px;
+  width: 70px;
+}
+
+.anim_on_circle {
+  -webkit-animation: on-circle 3s linear;
+  animation: on-circle 3s linear;
+  border-color: #fe59c2 #fe59c2 transparent transparent !important;
+  box-shadow: 0px 0px 16px 1px #fe59c2 !important;
+}
+
+.l-d .right .circleBox {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  width: 70px;
+  overflow: hidden;
+}
+
+.l-d .right .circleBox .circle {
+  box-sizing: border-box;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 10px;
+  right: 10px;
+  border-style: solid;
+  border-width: 6px;
+  border-color: #1A1E24 #1A1E24 transparent transparent;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 0px #1A1E24;
+  transform: rotate(45deg);
+}
+
+.l-d .right .topDotBox {
+  position: absolute;
+  right: 36px;
+  width: 26px;
+  height: 26px;
+  overflow: hidden;
+}
+
+.l-d .right .bottomDotBox {
+  position: absolute;
+  bottom: -20px;
+  right: 35px;
+  width: 26px;
+  height: 26px;
+  overflow: hidden;
+}
+
+.l-d .right .dot {
+  top: 0px;
+  right: -12px;
+  width: 10px;
+  height: 6px;
+}
+
+button {
+  background: #fe59c2;
+  font-size: 20px;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  box-shadow: 0px 0px 16px 1px #fe59c2;
+  border: none;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  outline: none;
+  cursor: pointer;
+}
+#off{
+  display: none;
+}
+.anim_on {
+  animation: on 3s ease-in-out alternate both;
+}
+
+.anim_off {
+  animation: off .5s ease-in-out alternate both;
+}
+
+@keyframes on {
+  35%, 37%, 39%, 41%, 100% {
+    background: #fe59c2;
+    box-shadow: 0px 0px 16px 1px #fe59c2;
+  }
+
+  0%, 34%, 36%, 36%, 38%, 40% {
+    background: #1A1E24;
+    box-shadow: 0px 0px 6px 0px #1A1E24;
+  }
+}
+
+@keyframes on-circle {
+  35%, 37%, 39%, 41%, 100% {
+    border-color: #fe59c2 #fe59c2 transparent transparent;
+    box-shadow: 0px 0px 16px 1px #fe59c2;
+  }
+
+  0%, 34%, 36%, 36%, 38%, 40% {
+    border-color: #1A1E24 #1A1E24 transparent transparent;
+    box-shadow: 0px 0px 6px 0px #1A1E24;
+  }
+}
+
+@keyframes off {
+  35%, 37%, 39%, 41%, 100% {
+    background: #1A1E24;
+    box-shadow: 0px 0px 6px 0px #1A1E24;
+  }
+
+  0%, 34%, 36%, 36%, 38%, 40% {
+    background: #fe59c2;
+    box-shadow: 0px 0px 16px 1px #fe59c2;
+  }
+}
+
+@keyframes off-circle {
+  35%, 37%, 39%, 41%, 100% {
+    border-color: #1A1E24 #1A1E24 transparent transparent;
+    box-shadow: 0px 0px 10px 0px #1A1E24;
+  }
+
+  0%, 34%, 36%, 36%, 38%, 40% {
+    border-color: #fe59c2 #fe59c2 transparent transparent;
+    box-shadow: 0px 0px 16px 1px #fe59c2;
+  }
+}
