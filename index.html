@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <div class="css_days n_001" tlp='N° 001'>
+  <div class="css_days n_001 headline" tlp='N° 001'>
     <p class="codepen" data-height="480" data-theme-id="36686" data-default-tab="result" data-user="vitor-siqueira" data-slug-hash="bJKEpJ"
       style="height: 480px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="100 days css Title N° 001">
       <span>See the Pen <a href="https://codepen.io/vitor-siqueira/pen/bJKEpJ/">
@@ -20,7 +20,7 @@
         on <a href="https://codepen.io">CodePen</a>.</span>
     </p>
   </div>
-  <div class="css_days n_95" tlp='N° 95'>
+  <div class="css_days n_95 headline" tlp='N° 95'>
     <p class="codepen" data-height="480" data-theme-id="36686" data-default-tab="result" data-user="vitor-siqueira" data-slug-hash="WWEWyL"
       style="height: 480px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; margin: 1em 0; padding: 1em;" data-pen-title="100 days css  pig  N° 095">
       <span>See the Pen <a href="https://codepen.io/vitor-siqueira/pen/WWEWyL/">
@@ -28,7 +28,7 @@
         on <a href="https://codepen.io">CodePen</a>.</span>
     </p>
   </div>
-  <div class="css_days n_96" tlp='N° 96'>
+  <div class="css_days n_96 headline" tlp='N° 96'>
     <p class="codepen" data-height="480" data-theme-id="36686" data-default-tab="result" data-user="vitor-siqueira" data-slug-hash="QPONwY"
       style="height: 480px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;margin: 1em 0; padding: 1em;" data-pen-title="square with anime.js N°  96">
       <span>See the Pen <a href="https://codepen.io/vitor-siqueira/pen/QPONwY/">
@@ -36,7 +36,7 @@
         on <a href="https://codepen.io">CodePen</a>.</span>
     </p>
   </div>
-  <div class="css_days n_97" tlp='N° 97'>
+  <div class="css_days n_97 headline" tlp='N° 97'>
     <p class="codepen" data-height="480" data-theme-id="36686" data-default-tab="result" data-user="vitor-siqueira" data-slug-hash="QPOxaR"
       style="height: 480px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Puppet 100 days css N° 097">
       <span>See the Pen <a href="https://codepen.io/vitor-siqueira/pen/QPOxaR/">
@@ -44,7 +44,7 @@
         on <a href="https://codepen.io">CodePen</a>.</span>
     </p>
   </div>
-  <div class="css_days n_98" tlp='N° 98'>
+  <div class="css_days n_98 headline" tlp='N° 98'>
     <p class="codepen" data-height="480" data-theme-id="36686" data-default-tab="result" data-user="vitor-siqueira" data-slug-hash="ZZvPLO"
       style="height: 480px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;margin: 1em 0; padding: 1em;" data-pen-title="100 days css Plopp N° 098">
       <span>See the Pen <a href="https://codepen.io/vitor-siqueira/pen/ZZvPLO/">
@@ -52,10 +52,15 @@
         on <a href="https://codepen.io">CodePen</a>.</span>
     </p>
   </div>
-  <div class="css_days n_99" tlp='N° 99'>
-    <span class="not_av">not available</span>
+  <div class="css_days n_99 headline" tlp='N° 99'>
+    <p class="codepen" data-height="480" data-theme-id="36686" data-default-tab="result" data-user="vitor-siqueira" data-slug-hash="BEVLRE"
+      style="height: 480px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="100 days css icon animation   N° 099">
+      <span>See the Pen <a href="https://codepen.io/vitor-siqueira/pen/BEVLRE/">
+          100 days css icon animation N° 099</a> by Vitor Siqueira (<a href="https://codepen.io/vitor-siqueira">@vitor-siqueira</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+    </p>
   </div>
-  <div class="css_days n_100" tlp='N° 100'>
+  <div class="css_days n_100 headline" tlp='N° 100'>
     <p class="codepen" data-height="480" data-theme-id="36686" data-default-tab="result" data-user="vitor-siqueira" data-slug-hash="eorbVv"
       style="height: 480px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="100 days css Neon Light N° 100">
       <span>See the Pen <a href="https://codepen.io/vitor-siqueira/pen/eorbVv/">
@@ -65,28 +70,40 @@
   </div>
 
   <div id="return" class="btn-return"></div>
-
+  <!-- <span class="not_av">not available</span> -->
   <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
   <script>
-  $(document).ready(function(){
-	$("#return").hide();
-	$(function () {
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > 450) {
-				$('#return').show();
-			} else {
-				$('#return').hide();
-			}
-		});
-		$('#return').click(function () {
-			$('body,html').animate({
-				scrollTop: 0
-			}, 300);
-		});
-	});
+  window.addEventListener("load", function() {
+  			$('.load').hide();
+  		});
+  </script>
+  <script>
+    ScrollReveal().reveal('.headline', {
+      delay: 900,
+      distance: '15px'
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      $("#return").hide();
+      $(function() {
+        $(window).scroll(function() {
+          if ($(this).scrollTop() > 450) {
+            $('#return').show();
+          } else {
+            $('#return').hide();
+          }
+        });
+        $('#return').click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          }, 300);
+        });
+      });
 
-});
+    });
   </script>
 </body>
 

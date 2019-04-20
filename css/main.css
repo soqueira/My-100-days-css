@@ -41,7 +41,8 @@ body::-webkit-scrollbar-thumb {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.btn-return{
+
+.btn-return {
   width: 40px;
   height: 40px;
   background: transparent;
@@ -52,7 +53,8 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
   transition: .3s;
 }
-.btn-return::after{
+
+.btn-return::after {
   content: '';
   width: 1px;
   height: 30px;
@@ -60,9 +62,10 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   top: 50%;
   left: 12px;
-  transform: translate(-50%,-50%) rotate(30deg);
+  transform: translate(-50%, -50%) rotate(30deg);
 }
-.btn-return::before{
+
+.btn-return::before {
   content: '';
   width: 1px;
   height: 30px;
@@ -70,5 +73,5 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   top: 50%;
   left: 27px;
-  transform: translate(-50%,-50%) rotate(-30deg);
+  transform: translate(-50%, -50%) rotate(-30deg);
 }
