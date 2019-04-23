@@ -9,9 +9,19 @@
   <title>my 100 days css</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/tooltip.css">
+
 </head>
 
 <body>
+  <div class="loader">
+    <div class="container">
+    <div class="container_content">
+      <div class="circle_1"></div>
+      <div class="circle_2"></div>
+      <div class="circle_3"></div>
+    </div>
+  </div>
+  </div>
   <div class="css_days n_001 headline" tlp='N° 001'>
     <p class="codepen" data-height="480" data-theme-id="36686" data-default-tab="result" data-user="vitor-siqueira" data-slug-hash="bJKEpJ"
       style="height: 480px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="100 days css Title N° 001">
@@ -36,7 +46,6 @@
         on <a href="https://codepen.io">CodePen</a>.</span>
     </p>
   </div>
-
   <div class="css_days n_95 headline" tlp='N° 95'>
     <p class="codepen" data-height="480" data-theme-id="36686" data-default-tab="result" data-user="vitor-siqueira" data-slug-hash="WWEWyL"
       style="height: 480px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; margin: 1em 0; padding: 1em;" data-pen-title="100 days css  pig  N° 095">
@@ -91,7 +100,12 @@
   <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
-
+  <script>
+  window.onload = function() {
+    $('.loader').css('display','none');
+    $('body').css('overflow', 'visible');
+  };
+  </script>
   <script>
     ScrollReveal().reveal('.headline', {
       delay: 200,
