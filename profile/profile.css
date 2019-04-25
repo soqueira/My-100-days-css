@@ -64,9 +64,9 @@ p {
   height: 75px;
   border-radius: 50%;
   border: 2px solid transparent;
-  border-bottom-color: whitesmoke;
-  border-top-color: whitesmoke;
-  border-right-color: whitesmoke;
+  border-bottom-color: white;
+  border-top-color: white;
+  border-right-color: white;
   position: absolute;
   transition: 1.5s;
 }
@@ -77,9 +77,9 @@ p {
   height: 80px;
   border-radius: 50%;
   border: 2px solid transparent;
-  border-bottom-color: whitesmoke;
-  border-left-color: whitesmoke;
-  border-top-color: whitesmoke;
+  border-bottom-color: white;
+  border-left-color: white;
+  border-top-color: white;
   position: absolute;
   transition: 1.5s;
 }
@@ -144,6 +144,9 @@ p {
 .div_buttons button {
   width: 120px;
   height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 10px;
   position: relative;
   bottom: 10px;
@@ -156,13 +159,33 @@ p {
   outline: none;
   transition: .3s;
 }
-
+.div_buttons button p{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  transition: .3s;
+}
+.div_buttons button i{
+  transform: translateX(-10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
 .div_buttons button:hover {
   transition: .3s;
   background: #b841f4;
   border: 1px solid #b841f4;
 }
-
+.div_buttons button:hover p{
+  transition: .3s;
+  transform: translateX(-15px);
+}
+.div_buttons button:hover i{
+  transition: .3s;
+  transform: translateX(25px);
+  opacity: 1;
+  visibility: visible;
+}
 .stats_inf {
   width: 129px;
   height: 284px;
