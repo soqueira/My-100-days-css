@@ -1,0 +1,247 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  background-image: linear-gradient(-225deg, #5271C4 0%, #B19FFF 48%, #ECA1FE 100%);
+  overflow: hidden;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  width: 320px;
+  height: 284px;
+  border-radius: 10px;
+  position: absolute;
+  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.profile_inf {
+  width: 200px;
+  height: 169px;
+  background: #282828;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top-left-radius: 4px;
+}
+
+.profile_inf .circles {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 35px;
+}
+
+.profile_inf .circles:after {
+  content: '';
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-bottom-color: whitesmoke;
+  border-top-color: whitesmoke;
+  border-right-color: whitesmoke;
+  position: absolute;
+  transition: 1.5s;
+}
+
+.profile_inf .circles:before {
+  content: '';
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-bottom-color: whitesmoke;
+  border-left-color: whitesmoke;
+  border-top-color: whitesmoke;
+  position: absolute;
+  transition: 1.5s;
+}
+
+.profile_inf .circles img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.circles:hover::after {
+  transition: 1.5s;
+  transform: rotate(360deg);
+  border-bottom-color: #b841f4;
+  border-top-color: #b841f4;
+  border-right-color: #b841f4;
+}
+
+.circles:hover::before {
+  transition: 1.5s;
+  transform: rotate(-360deg);
+  border-bottom-color: #b841f4;
+  border-left-color: #b841f4;
+  border-top-color: #b841f4;
+}
+
+.profile_inf_data {
+  width: 250px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile_inf_data p {
+  margin: 0;
+  padding: 0;
+  color: whitesmoke;
+}
+
+.profile_inf_data .name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.profile_inf_data .profession {
+  font-size: 11px;
+}
+
+.div_buttons {
+  width: 200px;
+  height: 115px;
+  background: #282828;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom-left-radius: 4px;
+}
+
+.div_buttons button {
+  width: 120px;
+  height: 30px;
+  margin-bottom: 10px;
+  position: relative;
+  bottom: 10px;
+  border-radius: 15px;
+  border: 1px solid white;
+  background: white;
+  color: #282828;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: .3s;
+}
+
+.div_buttons button:hover {
+  transition: .3s;
+  background: #b841f4;
+  border: 1px solid #b841f4;
+}
+
+.stats_inf {
+  width: 129px;
+  height: 284px;
+  background: #282828;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.posts {
+  width: 100%;
+  height: 99px;
+  background: #c763f9;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: .3s;
+  margin-bottom: 1px;
+  border-top-right-radius: 4px;
+}
+
+.inf_size_min {
+  font-size: 11px;
+}
+
+.posts:hover {
+  background: #b841f4;
+  transition: .3s;
+}
+
+.likes {
+  width: 100%;
+  height: 99px;
+  background: #c763f9;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: .3s;
+  margin-bottom: 1px;
+}
+
+.likes:hover {
+  background: #b841f4;
+  transition: .3s;
+}
+
+.follower {
+  width: 100%;
+  height: 99px;
+  background: #c763f9;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: .3s;
+  border-bottom-right-radius: 4px;
+}
+
+.follower:hover {
+  transition: .3s;
+  background: #b841f4;
+}
