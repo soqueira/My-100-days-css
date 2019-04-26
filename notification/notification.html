@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> Notification </title>
+  <link rel="stylesheet" href="notification.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="center">
+      <div class="main_notification">
+        <nav>
+          <div class="toggle">
+            <div class="bar_1"></div>
+            <div class="bar_2"></div>
+            <div class="circle"></div>
+          </div>
+          <input class="search_input " type="text" placeholder='Search...'>
+          <p class="notification_title">Notifications</p>
+          <div class="search_box">
+            <i class="fas fa-search"></i>
+          </div>
+        </nav>
+        <div class="container_notifications">
+          <div class="line"></div>
+          <div class="notification_content">
+            <div class="content">
+              <div class="circle_notification"></div>
+              <span class="time">9:24 AM</span>
+              <p><strong>John Walker</strong> posted a photo on your wall.</p>
+            </div>
+            <div class="content">
+              <div class="circle_notification"></div>
+              <span class="time">8:19 AM</span>
+              <p><strong>Alice Parker</strong> commented your last post.</p>
+            </div>
+            <div class="content">
+              <div class="circle_notification"></div>
+              <span class="time">5:08 AM</span>
+              <p><strong>Luke Wayne</strong> added you as friend.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="nav_left">
+        <ul>
+          <li><i class="fas fa-home"></i> Dashboard</li>
+          <li><i class="fas fa-user-alt"></i> Profile</li>
+          <li><i class="fas fa-bell"></i> Notifications</li>
+          <li><i class="fas fa-comments"></i> Messages</li>
+          <li><i class="fas fa-cog"></i> Settings</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function open() {
+      var btn_search = document.getElementsByClassName('search_box')[0];
+      var input = document.getElementsByClassName('search_input')[0];
+      btn_search.addEventListener('click', function() {
+        if (input.classList.contains('search_active')) {
+          input.classList.remove('search_active');
+          setTimeout(function() {
+            input.value = '';
+          }, 300)
+
+        } else {
+          input.classList.add('search_active');
+          setTimeout(function() {
+          input.focus();
+        }, 100)
+        }
+      });
+      var toggle = document.getElementsByClassName('toggle')[0];
+      var menu = document.getElementsByClassName('nav_left')[0];
+      var container = document.getElementsByClassName('main_notification')[0];
+      toggle.addEventListener('click', function() {
+        if (container.classList.contains('menu_container_active')) {
+          container.classList.remove('menu_container_active');
+          menu.classList.remove('menu_active');
+        } else {
+          container.classList.add('menu_container_active');
+          menu.classList.add('menu_active');
+        }
+
+      });
+
+    }
+    open()
+  </script>
+  <script>
+    $(document).ready(function() {
+      $(".search_input").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".content").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
