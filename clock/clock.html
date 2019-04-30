@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="clock.css">
+  <title>clock</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="center">
+      <div class="clock">
+        <div class="clock_display">
+          <p class="inf_display"><span id="week"></span><span id="day"></span><span id="month"></span><span id="year"></span></p>
+          <div class="time_display">
+            <p id="timer_hour"></p>
+          </div>
+          <p class="inf_display">
+            <span><i class="fas fa-heartbeat"></i>81</span>
+            <span>1248 Kcal</span>
+          </p>
+        </div>
+        <svg class='pointers' viewbox='0 0 202 202' xlmns='http://www.w3.org/2000/svg'>
+          <circle class='circle_svg' cx='101' cy='101' r='99.5'></circle>
+        </svg>
+
+        <svg class='spinner' viewbox='0 0 202 202' xlmns='http://www.w3.org/2000/svg'>
+          <circle id="svgTime" class='circle_svg animOut' cx='101' cy='101' r='99.5'></circle>
+        </svg>
+
+      </div>
+    </div>
+  </div>
+  <p class="sy">wait the sync</p>
+  <script src='clock.js'></script>
+</body>
+
+</html>
