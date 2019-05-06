@@ -72,7 +72,7 @@ label {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  cursor: url(https://raw.githubusercontent.com/nostalgic-css/NES.css/develop/assets/cursor-click.png) 14 0, pointer;
+  cursor: url(https://raw.githubusercontent.com/nostalgic-css/NES.css/develop/assets/cursor-click.png) 14 0, pointer !important;
 }
 
 input {
