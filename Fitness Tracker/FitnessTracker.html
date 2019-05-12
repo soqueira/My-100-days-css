@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fitness Tracker</title>
+  <link rel="stylesheet" href="fitness-tracker.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="main_title">
+      <p>your daily <span>progress</span></p>
+    </div>
+    <div class="main">
+
+      <div class="circle_big kcal">
+        <div class="text">
+          <div class="text_bg inner_1">2758</div>
+          <div class="text_sm">kcal</div>
+        </div>
+        <svg>
+          <circle class="bg" cx="57" cy="57" r="52" />
+          <circle class="progress" cx="57" cy="57" r="52" />
+        </svg>
+      </div>
+      <div class="circle_sm">
+        <div class="text">
+          <div class="text_bg inner_2">8563</div>
+          <div class="text_sm">steps</div>
+        </div>
+        <svg>
+          <circle class="bg_sm" cx="40" cy="40" r="37" />
+          <circle class="progress_sm" cx="40" cy="40" r="37" />
+        </svg>
+      </div>
+      <div class="circle_sm">
+        <div class="text">
+          <div class="text_bg inner_3">6,2</div>
+          <div class="text_sm">km</div>
+        </div>
+        <svg>
+          <circle class="bg_sm" cx="40" cy="40" r="37" />
+          <circle class="progress_sm" cx="40" cy="40" r="37" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <script src="../node_modules/animejs/lib/anime.min.js"></script>
+  <script>
+    anime({
+      targets: '.inner_1',
+      innerHTML: [0, 2758],
+      round: 1,
+      easing: 'linear',
+      duration: 1500
+    });
+    anime({
+      targets: '.inner_2',
+      innerHTML: [0, 8563],
+      round: 1,
+      easing: 'linear',
+      duration: 1000
+    });
+    anime({
+      targets: '.inner_3',
+      innerHTML: [0, 6.2],
+      round: 10,
+      easing: 'linear',
+      duration: 1000
+    });
+  </script>
+</body>
+
+</html>
