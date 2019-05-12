@@ -1,0 +1,284 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800,300);
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: black;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  position: absolute;
+  width: 300px;
+  height: 100px;
+}
+
+.ball {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  animation: ballFade 1s ease-in-out;
+  animation-fill-mode: forwards;
+  position: absolute;
+  left: 120px;
+  top: 20px;
+}
+
+@keyframes ballFade {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.1);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+.line_left {
+  width: 0px;
+  height: 4px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: line 1s ease-in-out;
+  animation-delay: .85s;
+}
+
+.line_right {
+  width: 0px;
+  height: 4px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: line_2 1s ease-in-out;
+  animation-delay: .85s;
+}
+
+@keyframes line {
+  0% {
+    width: 0px;
+  }
+
+  25% {
+    width: 150px;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes line_2 {
+  0% {
+    width: 0px;
+  }
+
+  25% {
+    width: 150px;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+.line_vert_left {
+  width: 4px;
+  height: 0;
+  background: white;
+  position: absolute;
+  left: 0.5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: vert_line_left .3s ease-out both;
+  animation-delay: 1.7s;
+}
+
+.line_vert_left::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  background: white;
+  animation: vert_line_el .3s ease-out both;
+  animation-delay: 1.9s;
+}
+
+.line_vert_left::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 4px;
+  background: white;
+  bottom: 0;
+  animation: vert_line_el .3s ease-out both;
+  animation-delay: 1.9s;
+}
+
+@keyframes vert_line_el {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 25px;
+  }
+}
+
+@keyframes vert_line_left {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 70px;
+  }
+}
+
+.line_vert_right {
+  width: 4px;
+  height: 0;
+  background: white;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: vert_line_right .3s ease-out both;
+  animation-delay: 1.7s;
+}
+
+.line_vert_right::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  right: 0;
+  background: white;
+  animation: vert_line_el .3s ease-out both;
+  animation-delay: 1.9s;
+}
+
+.line_vert_right::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 4px;
+  background: white;
+  bottom: 0;
+  right: 0;
+  animation: vert_line_el .3s ease-out both;
+  animation-delay: 1.9s;
+}
+
+@keyframes vert_line_right {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 70px;
+  }
+}
+
+.big_p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scaleY(0);
+  font-size: 50px;
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase;
+  animation: grow .3s ease-out both;
+  animation-delay: 1.7s;
+}
+
+@keyframes grow {
+  0% {
+    transform: translate(-50%, -50%) scaleY(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scaleY(1);
+  }
+}
+
+.sm_p_top {
+  color: white;
+  position: absolute;
+  left: 70px;
+  bottom: 75px;
+  font-size: 30px;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fade_right .6s ease-out both;
+  animation-delay: 2.1s;
+}
+
+.sm_p_bottom {
+  color: white;
+  position: absolute;
+  left: 90px;
+  top: 75px;
+  font-size: 30px;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fade_left .6s ease-out both;
+  animation-delay: 2.1s;
+}
+
+@keyframes fade_right {
+  0% {
+    opacity: 0;
+    left: 70px;
+  }
+
+  100% {
+    opacity: 1;
+    left: 80px;
+  }
+}
+
+@keyframes fade_left {
+  0% {
+    opacity: 0;
+    left: 90px;
+  }
+
+  100% {
+    opacity: 1;
+    left: 70px;
+  }
+}
