@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background: #57D895;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.btn {
+  width: 250px;
+  height: 55px;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 2px solid white;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  user-select: none;
+}
+
+img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#cb:checked~.btn {
+  animation: anim_btn .7s ease-in-out both, fill .2s ease-out 1.5s forwards;
+}
+
+@keyframes anim_btn {
+  0% {
+    width: 250px;
+    color: transparent;
+  }
+
+  50% {
+    color: transparent;
+    width: 55px;
+    height: 55px;
+  }
+
+  95% {
+    color: transparent;
+    width: 55px;
+    height: 55px;
+    border: 2px solid #45B078;
+  }
+
+  100% {
+    border: 2px solid #45B078;
+    color: transparent;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+  }
+}
+
+@keyframes fill {
+  0% {
+    background: transparent;
+    border-color: #fff;
+  }
+
+  100% {
+    background: #fff;
+  }
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  fill: none;
+  stroke-width: 2px;
+  stroke: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-49%, -49%) rotate(-90deg);
+  visibility: hidden;
+  opacity: 0;
+  stroke-dasharray: 183 183;
+  stroke-dashoffset: 183;
+}
+
+#cb:checked~.circle {
+  visibility: visible;
+  opacity: 1;
+  transition: 0s;
+  animation: circle 1s ease-in-out .69s both, circle_sc .4s ease-in-out 1.5s forwards;
+}
+
+@keyframes circle {
+  0% {
+    stroke-dashoffset: 183;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes circle_sc {
+  0% {
+    transform: translate(-49%, -49%) rotate(-90deg) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    transform: translate(-49%, -49%) rotate(-90deg) scale(2);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#cb:checked~.btn img {
+  animation: check .4s ease-in-out both;
+  animation-delay: 1.5s;
+}
+
+@keyframes check {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
