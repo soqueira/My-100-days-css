@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modal window</title>
+  <link rel="stylesheet" href="Modal-window.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="modal modal_1 active">
+      <div class="n_bg"></div>
+      <div class="n_pos">1</div>
+      <div class="modal_content">
+        <span class="modal_title">The couch</span>
+        <span class="modal_paragraph">If you want to grow, get outside
+          your comfort zone.</span>
+      </div>
+      <button class="btn" onclick="fadeModal('modal_1')">Ok</button>
+    </div>
+    <div class="modal modal_2">
+      <div class="n_bg"></div>
+      <div class="n_pos">2</div>
+      <div class="modal_content">
+        <span class="modal_title">Failing is learning
+        </span>
+        <span class="modal_paragraph">Failing is learning
+          Pick yourself up, dust yourself off,
+          and start again.</span>
+      </div>
+      <button class="btn" onclick="fadeModal('modal_2')">Ok</button>
+    </div>
+    <div class="modal modal_3">
+      <div class="n_bg"></div>
+      <div class="n_pos">3</div>
+      <div class="modal_content">
+        <span class="modal_title">Flowers and rainbows</span>
+        <span class="modal_paragraph">Always be yourself,
+          unless you can be a unicorn.
+
+        </span>
+      </div>
+      <button class="btn" onclick="fadeModal('modal_3')">Ok</button>
+    </div>
+  </div>
+
+  <script src="Modal-window.js"></script>
+</body>
+
+</html>
