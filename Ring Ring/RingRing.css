@@ -1,0 +1,102 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  overflow: hidden;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bell {
+  fill: white;
+  animation: shake 2.5s ease infinite;
+}
+
+@keyframes shake {
+
+  0%,
+  50%,
+  100% {
+    transform: rotate(0);
+  }
+
+  5%,
+  10%,
+  15%,
+  20%,
+  25%,
+  30%,
+  35%,
+  40% {
+    transform: rotate(6deg) scale(1.1);
+  }
+
+  45% {
+    transform: rotate(4deg);
+  }
+
+  7.5%,
+  12.5%,
+  17.5%,
+  22.5%,
+  27.5%,
+  32.5%,
+  37.5%,
+  42.5% {
+    transform: rotate(-6deg) scale(1.1);
+  }
+
+  47.5% {
+    transform: rotate(-2deg);
+  }
+}
+
+.lines {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  background: transparent;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-left-color: white;
+  border-right-color: white;
+  animation: lines 2.5s ease-out infinite both;
+}
+
+.line_1 {
+  animation-delay: .35s;
+}
+
+.line_2 {
+  animation-delay: .55s;
+}
+
+@keyframes lines {
+  0% {
+    opacity: 0;
+  }
+
+  1% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
