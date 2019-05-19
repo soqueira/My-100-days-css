@@ -24,10 +24,16 @@
 
             var valor = el.value.toLowerCase();
             if (valor) {
-              $(".pens").children().hide();
-              $(".pens [data-search*=" + valor + "]").show();
+              $('.pens').children().hide();
+              $('.pens [data-search*=' + valor + ']').show();
+              if($('.pens').height() <= 0){
+                $('.notFound').show();
+              }else{
+                $('.notFound').hide();
+              }
             } else {
               $(".pens").children().show();
+              $('.notFound').hide();
             }
             search(el);
           }, timeout);
