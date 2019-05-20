@@ -1,0 +1,36 @@
+body,html{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+.container{
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dots{
+  width: 7px;
+  height: 7px;
+}
+@keyframes wave {
+0%, 100% {
+  transform: translate3d( 50px, 0,0 );
+  background: #df42f4;
+}
+25%{
+  background: black;
+}
+50% {
+  transform: translate3d( -50px, 0,0 );
+  background: #8641f4;
+}
+
+}
