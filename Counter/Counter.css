@@ -1,0 +1,138 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web&display=swap);
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+  overflow: hidden;
+  font-family: 'Titillium Web', sans-serif;
+  user-select: none;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter {
+  width: 150px;
+  height: 40px;
+  background: white;
+  border-radius: 50px;
+  position: absolute;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+}
+
+.min {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(20%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+.min svg {
+  fill: #6A85A0;
+}
+
+.min:hover {
+  background: #6A85A0;
+}
+
+.min:hover svg {
+  fill: #fff;
+}
+
+.display_counter {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6A85A0;
+  font-size: 20px;
+}
+
+.plus {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(-20%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+.plus svg {
+  fill: #6A85A0;
+}
+
+.plus:hover {
+  background: #6A85A0;
+}
+
+.plus:hover svg {
+  fill: #fff;
+}
+
+.fadeIn {
+  animation: fadeIn .3s ease-in reverse;
+}
+
+.fadeOut {
+  animation: fadeOut .3s ease-in reverse;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1.4);
+    opacity: 0;
+  }
+}
