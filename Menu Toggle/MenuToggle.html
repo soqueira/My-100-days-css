@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Menu Toggle</title>
+  <link rel="stylesheet" href="MenuToggle.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="menu_toggle">
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <div class="menu">
+      <ul>
+        <li>Home</li>
+        <li>Work</li>
+        <li>Life</li>
+        <li>Spirit</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    function toggle() {
+      let menuToggle = document.getElementsByClassName('menu_toggle')[0];
+      let top = document.getElementsByClassName('line')[0];
+      let bottom = document.getElementsByClassName('line')[1];
+      let menu = document.getElementsByClassName('menu')[0];
+      menuToggle.addEventListener('click', function() {
+        top.classList.add('active_line_top');
+        bottom.classList.add('active_line_bottom');
+        menu.classList.add('acive_menu');
+        top.classList.remove('close_top');
+        bottom.classList.remove('close_bottom');
+      });
+      menu.addEventListener('click', function() {
+        top.classList.remove('active_line_top');
+        bottom.classList.remove('active_line_bottom');
+        menu.classList.remove('acive_menu');
+        top.classList.add('close_top');
+        bottom.classList.add('close_bottom');
+      });
+    }
+    toggle()
+  </script>
+</body>
+
+</html>
