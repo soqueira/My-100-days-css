@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300');
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
+  background-blend-mode: multiply, multiply;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_error {
+  width: 280px;
+  height: 250px;
+  position: absolute;
+  background: white;
+  box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+}
+
+.error_message {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #415868;
+}
+
+svg {
+  width: 50px;
+  height: 50px;
+}
+
+.error_message h4 {
+  font-weight: 400;
+  font-size: 20px;
+  margin: 20px 0px 0px 0px;
+  padding: 0;
+}
+
+.error_message p {
+  font-weight: 100;
+  margin: 10px 0px 0px 0px;
+  padding: 0;
+  width: 200px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.btn {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  background: #F65656;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 100;
+  outline: none;
+  cursor: pointer;
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #EC3434;
+}
+
+.show {
+  animation: fadeIn .4s ease-in-out both;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hide {
+  animation: fadeOut .4s ease-in-out both;
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
