@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Twisted Pyramid</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div class="container"></div>
+  <script>
+    function rect() {
+      let container = document.getElementsByClassName('container')[0];
+      for (let i = 0; i < 22; i++) {
+        const size = 220 - (i * 10);
+        const animationTime = i / 30;
+        container.innerHTML += '<div style="width:' + size + 'px; height:' + size + 'px; animation: rotate 2s ease-in-out ' + animationTime + 's alternate infinite " class="rect"></div>';
+      }
+    }
+    rect()
+  </script>
+</body>
+
+</html>
