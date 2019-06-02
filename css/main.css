@@ -41,12 +41,14 @@ header span {
     height: 450px;
     border: none !important;
     margin: 30px 10px 15px 10px;
-    overflow: hidden;
+    overflow: hidden !important;
     -webkit-box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
     box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
 }
-
+.embed-nav{
+  background: red !important;
+}
 .not_av {
     color: white;
     text-transform: uppercase;

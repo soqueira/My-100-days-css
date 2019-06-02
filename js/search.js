@@ -1,47 +1,42 @@
-(function($) {
-  $.fn.extend({
-    search: function(callback, timeout) {
-      timeout = timeout;
-      var timeoutReference,
-        search = function(el) {
-          if (!timeoutReference) return;
-          timeoutReference = null;
-          callback.call(el);
-        };
-      return this.each(function(i, el) {
-        var $el = $(el);
-        // Chrome Fix (Use keyup over keypress to detect backspace)
-        $el.is(':input') && $el.on('keyup keypress paste', function(e) {
-          // This catches the backspace button in chrome, but also prevents
-          // the event from triggering too preemptively. Without this line,
-          // using tab/shift+tab will make the focused element fire the callback.
-          if (e.type == 'keyup' && e.keyCode != 8) return;
-
-          // Check if timeout has been set. If it has, "reset" the clock and
-          // start over again.
-          if (timeoutReference) clearTimeout(timeoutReference);
-          timeoutReference = setTimeout(function() {
-
-            var valor = el.value.toLowerCase();
-            if (valor) {
-              $('.pens').children().hide();
-              $('.pens [data-search*=' + valor + ']').show();
-              if($('.pens').height() <= 0){
-                $('.notFound').show();
-              }else{
-                $('.notFound').hide();
-              }
-            } else {
-              $(".pens").children().show();
-              $('.notFound').hide();
-            }
-            search(el);
-          }, timeout);
-        }).on('blur', function() {
-          //when leaving the input
-          search(el);
-        });
-      });
+(function() {
+  let scJs = function(arg) {
+    if (!(this instanceof scJs)) {
+      return new scJs(arg);
     }
-  });
-})(jQuery);
+    this.arg = arg;
+  };
+  scJs.fn = scJs.prototype = {
+    search: function() {
+      const input = document.querySelector(this.arg);
+      const dataSearch = document.getElementsByClassName("itemSc");
+      const container = document.getElementsByClassName("pens")[0];
+      const notfound = document.getElementsByClassName("notFound")[0];
+      console.log(dataSearch)
+      input.addEventListener("keyup", function() {
+        const valor = input.value.toLowerCase();
+        for (let i = 0; i < dataSearch.length; i++) {
+          if (valor) {
+            if (dataSearch[i].dataset.search === valor) {
+              dataSearch[i].style.display = "block";
+            } else {
+              dataSearch[i].style.display = "none";
+            }
+          } else {
+            for (let j = 0; j < dataSearch.length; j++) {
+              dataSearch[i].style.display = "block";
+            }
+          }
+        }
+        if (container.offsetHeight <= 0) {
+          notfound.style.display = "block";
+        } else if (container.offsetHeight >= 90) {
+          notfound.style.display = "none";
+        } else {
+          notfound.style.display = "block";
+        }
+      });
+
+    }
+  }
+  window.scJs = scJs, window.scJs = scJs;
+})();
