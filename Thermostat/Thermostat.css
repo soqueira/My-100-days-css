@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300');
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background: #2B4147;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Thermostat {
+  width: 250px;
+  height: 250px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.ring {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+  z-index: 1;
+}
+
+.border {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  transform-origin: 0 0;
+  transform: rotate(45deg);
+  border-radius: 0 0 100px 0;
+}
+
+.status {
+  width: 135px;
+  height: 135px;
+  background: white;
+  z-index: 2;
+  border-radius: 50%;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+
+.outside {
+  position: absolute;
+  font-size: 10px;
+  left: 60px;
+  top: 10px;
+  color: #7a7a7a;
+}
+
+.room {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 60%);
+  font-size: 10px;
+  color: #7a7a7a;
+}
+
+.temp {
+  font-size: 60px;
+  position: absolute;
+}
+
+.temp:nth-child(1) {
+  opacity: 1;
+  transform: translate(30px, 30%) scale(1);
+  position: absolute;
+  transition: .5s ease-in-out;
+}
+
+.temp:nth-child(2) {
+  opacity: 0;
+  transform: translate(60px, 30%) scale(0);
+  transition: .5s ease-in-out;
+}
+
+.Thermostat:hover .status .temp:nth-child(1) {
+  opacity: 0;
+  transform: translate(-20px, 30%) scale(0);
+  transition: .5s ease-in-out;
+}
+
+.Thermostat:hover .status .temp:nth-child(2) {
+  transition: .5s ease-in-out;
+  opacity: 1;
+  transform: translate(30px, 30%) scale(1);
+}
+
+.indicator {
+  width: 1px;
+  height: 12px;
+  position: absolute;
+  left: 50%;
+  background: #6C6C6C;
+  transform-origin: 0 65px;
+  transform: rotate(-50deg);
+  transition: .5s ease-in-out;
+}
+
+.Thermostat:hover .status .indicator {
+  transform: rotate(-40deg);
+}
