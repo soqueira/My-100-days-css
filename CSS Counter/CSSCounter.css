@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400');
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #313C46;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter {
+    width: 130px;
+    height: 50px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    display: none;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    cursor: pointer;
+}
+
+.pause {
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.play {
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+}
+
+#check:checked~.icon .pause {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+}
+
+#check:checked~.icon .play {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.number {
+    float: left;
+}
+
+.number span {
+    display: block;
+    height: 40px;
+    width: 22px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+    color: #478BB8;
+}
+
+.units {
+    animation: count 10s steps(1) infinite;
+}
+
+.tens {
+    animation: count 100s steps(1) infinite;
+}
+
+.hundreds {
+    animation: count 1000s steps(1) infinite;
+}
+
+.thousands {
+    animation: count 10000s steps(1) infinite;
+}
+
+#check:checked~.counter .units,
+#check:checked~.counter .tens,
+#check:checked~.counter .hundreds {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+
+@keyframes count {
+    00% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+
+    10% {
+        -webkit-transform: translateY(-40px);
+        transform: translateY(-40px);
+    }
+
+    20% {
+        -webkit-transform: translateY(-80px);
+        transform: translateY(-80px);
+    }
+
+    30% {
+        -webkit-transform: translateY(-120px);
+        transform: translateY(-120px);
+    }
+
+    40% {
+        -webkit-transform: translateY(-160px);
+        transform: translateY(-160px);
+    }
+
+    50% {
+        -webkit-transform: translateY(-200px);
+        transform: translateY(-200px);
+    }
+
+    60% {
+        -webkit-transform: translateY(-240px);
+        transform: translateY(-240px);
+    }
+
+    70% {
+        -webkit-transform: translateY(-280px);
+        transform: translateY(-280px);
+    }
+
+    80% {
+        -webkit-transform: translateY(-320px);
+        transform: translateY(-320px);
+    }
+
+    90% {
+        -webkit-transform: translateY(-360px);
+        transform: translateY(-360px);
+    }
+}
