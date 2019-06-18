@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Waves</title>
+  <link rel="stylesheet" href="Waves.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="wave wave_back"></div>
+    <div class="wave wave_middle"></div>
+    <div class="wave wave_front"></div>
+  </div>
+
+  <script>
+    function wave() {
+      let wave_back = document.getElementsByClassName('wave_back')[0];
+      let wave_middle = document.getElementsByClassName('wave_middle')[0];
+      let wave_front = document.getElementsByClassName('wave_front')[0];
+      for (let i = 0; i < 10; i++) {
+        wave_back.innerHTML += '<div class="circle"></div>';
+        wave_middle.innerHTML += '<div class="circle"></div>'
+        wave_front.innerHTML += '<div class="circle"></div>'
+      }
+    }
+    wave()
+  </script>
+</body>
+
+</html>
