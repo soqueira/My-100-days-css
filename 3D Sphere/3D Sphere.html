@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>3D Sphere</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="center">
+      <div class="form"></div>
+    </div>
+  </div>
+  <script>
+    function sphere() {
+      let form = document.getElementsByClassName('form')[0];
+      var radius = 200;
+      var speed = 6 + 's';
+      var size;
+      var offset;
+      var pos;
+      var id;
+      for (let i = 1; i <= 9; i++) {
+        size = radius - (2 * (i * i));
+        offset = (i * 15) - ((i * i) / 2);
+        pos = ((radius - size) / 2) + 'px';
+        form.innerHTML += '<div class="slice slice-' + i + '" style="width: ' + size + 'px; height:' + size + 'px; left: ' + pos + '; top: ' + pos + ';transform: translateY(' + offset + 'px) rotateX(90deg)"></div>';
+
+        let id = i + 9;
+
+      }
+      for (let j = 10; j <= 18; j++) {
+
+        form.innerHTML += '<div class="slice slice-' + j + '"></div>';
+      }
+    }
+    sphere()
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #1c1c1c;
+  overflow: hidden;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  perspective: 350px;
+  position: absolute;
+}
+
+.form {
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: rotateX(-25deg);
+  transition: 1s ease-in-out;
+}
+
+.form:hover {
+  transform: rotateX(25deg);
+}
+
+.slice {
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #1c1c1c;
+  transition: 1s ease-in-out;
+}
+
+.form .slice-10 {
+  width: 198px;
+  height: 198px;
+  left: 1px;
+  top: 21px;
+  -webkit-transform: translateY(-14.5px) rotateX(90deg);
+  transform: translateY(-14.5px) rotateX(90deg);
+}
+
+.form .slice-11 {
+  width: 192px;
+  height: 192px;
+  left: 4px;
+  top: 26px;
+  -webkit-transform: translateY(-28px) rotateX(90deg);
+  transform: translateY(-28px) rotateX(90deg);
+}
+
+.form .slice-12 {
+  width: 182px;
+  height: 182px;
+  left: 9px;
+  top: 33px;
+  -webkit-transform: translateY(-40.5px) rotateX(90deg);
+  transform: translateY(-40.5px) rotateX(90deg);
+}
+
+.form .slice-13 {
+  width: 168px;
+  height: 168px;
+  left: 16px;
+  top: 41px;
+  -webkit-transform: translateY(-52px) rotateX(90deg);
+  transform: translateY(-52px) rotateX(90deg);
+}
+
+.form .slice-14 {
+  width: 150px;
+  height: 150px;
+  left: 25px;
+  top: 53px;
+  -webkit-transform: translateY(-62.5px) rotateX(90deg);
+  transform: translateY(-62.5px) rotateX(90deg);
+}
+
+.form .slice-15 {
+  width: 128px;
+  height: 128px;
+  left: 36px;
+  top: 63px;
+  -webkit-transform: translateY(-72px) rotateX(90deg);
+  transform: translateY(-72px) rotateX(90deg);
+}
+
+.form .slice-16 {
+  width: 102px;
+  height: 102px;
+  left: 49px;
+  top: 75px;
+  -webkit-transform: translateY(-80.5px) rotateX(90deg);
+  transform: translateY(-80.5px) rotateX(90deg);
+}
+
+.form .slice-17 {
+  width: 72px;
+  height: 72px;
+  left: 64px;
+  top: 92px;
+  -webkit-transform: translateY(-88px) rotateX(90deg);
+  transform: translateY(-88px) rotateX(90deg);
+}
+
+.form .slice-18 {
+  width: 38px;
+  height: 38px;
+  left: 81px;
+  top: 110px;
+  -webkit-transform: translateY(-94.5px) rotateX(90deg);
+  transform: translateY(-94.5px) rotateX(90deg);
+}
