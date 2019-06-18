@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Icosahedron</title>
+  <link rel="stylesheet" href="Icosahedron.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="center">
+      <div class="ikosaeder"></div>
+    </div>
+  </div>
+  <script>
+    function ikosaeder() {
+      let ikosaeder = document.getElementsByClassName('ikosaeder')[0];
+
+      for (let i = 1; i <= 20; i++) {
+        ikosaeder.innerHTML += '<div class="side side-' + i + '"></div>'
+      }
+    }
+    ikosaeder()
+  </script>
+</body>
+
+</html>
