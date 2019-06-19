@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slice Transition</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="slices">
+      <div class="text">
+        <h1>Slice</h1>
+        <h1>Transition</h1>
+      </div>
+    </div>
+  </div>
+  <script>
+    function slice() {
+      let containerSlices = document.getElementsByClassName('slices')[0];
+      let nullbase;
+      for (let i = 1; i <= 4; i++) {
+        nullbase = i - 1;
+        containerSlices.innerHTML += '<div class="slice slice-' + i + '" style="background-position: ' + nullbase * -100 + 'px 0;"></div>'
+      }
+    }
+    slice()
+  </script>
+</body>
+
+</html>

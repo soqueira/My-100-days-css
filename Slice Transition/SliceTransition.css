@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: black;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+	overflow: hidden;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  overflow: hidden;
+}
+
+.text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 145px;
+}
+
+h1 {
+  line-height: 60px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  transition: .5s ease-in-out;
+  transform: translateX(0);
+}
+
+h1:nth-child(1) {
+  font-size: 60px;
+}
+
+h1:nth-child(2) {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.slices {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: url('https://100dayscss.com/codepen/slice-image-1.jpg') center center no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.slices:hover h1:nth-child(1) {
+  transform: translateX(-40px);
+  opacity: 0;
+}
+
+.slices:hover h1:nth-child(2) {
+  transform: translateX(40px);
+  opacity: 0;
+}
+
+.slices:hover .slice {
+  transform: translateY(0);
+  opacity: 1 !important;
+}
+
+.slice {
+  position: relative;
+  z-index: 2;
+  float: left;
+  box-sizing: border-box;
+  width: 100px;
+  height: 400px;
+  background: url('https://100dayscss.com/codepen/slice-image-2.jpg') center center no-repeat;
+  background-size: 400px 400px;
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: .5s ease-in-out;
+}
+
+.slice:nth-child(2n + 2) {
+  transform: translateY(50px);
+}
