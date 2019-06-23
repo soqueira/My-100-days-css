@@ -1,0 +1,152 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #242424;
+  overflow: hidden;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #242424;
+  color: #5E5E5E;
+  display: grid;
+  grid-template-rows: 190px 190px;
+  grid-template-columns: 380px;
+  justify-content: center;
+  align-content: center;
+}
+
+.prices {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 150px;
+  justify-content: center;
+  align-content: center;
+  grid-gap: 10px;
+  transition: .3s ease-in-out;
+}
+
+.price {
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: .3s ease-in-out;
+}
+
+.title_price {
+  margin: 0;
+  padding: 5px 0px 5px 0px;
+  text-align: center;
+  background: #7DD0ED;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  transition: .3s ease-in-out;
+}
+
+.price:hover {
+  transform: scale(1.1);
+}
+
+.price:hover .title_price {
+  transition: .3s ease-in-out;
+  background: #27A6D2;
+}
+
+.infos {
+  width: 100px;
+  height: 121px;
+  position: relative;
+  top: 0;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 40px 30px 10px 10px 10px 10px;
+  text-align: center;
+}
+
+.strips {
+  width: 60px;
+  height: 2px;
+  background: #E4E4E4;
+  margin: auto;
+}
+
+.info_price {
+  font-size: 35px;
+  font-weight: 800;
+  transition: .3s ease-in-out;
+}
+
+.info_month {
+  font-size: 11px;
+}
+
+.strips:nth-child(2n + 2) {
+  width: 40px;
+}
+
+.price:hover .infos .info_price, .price:hover .infos .info_month {
+  transition: .3s ease-in-out;
+  color: #27A6D2
+}
+
+.datas {
+  background: white;
+  display: grid;
+  grid-template-rows: repeat(3, 40px);
+  align-content: center;
+  grid-gap: 10px;
+}
+
+.bar {
+  width: 330px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50px;
+  position: absolute;
+  margin: 2px 0 0px 20px;
+  z-index: 1;
+}
+
+.data .span1 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-size: 14px;
+  margin: 0 0 0 20px;
+}
+
+.data .span2 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-size: 14px;
+  float: right;
+  margin: 0px 35px 0px 0px;
+}
+
+.fill {
+  width: 0;
+  height: 10px;
+  background: #27A6D2;
+  border-radius: 50px;
+  position: absolute;
+  margin: 2px 0 0px 20px;
+  z-index: 2;
+  transition: all .3s;
+}
