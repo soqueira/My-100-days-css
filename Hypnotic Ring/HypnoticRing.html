@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> Hypnotic Ring </title>
+  <link rel="stylesheet" href="HypnoticRing.css">
+</head>
+
+<body>
+  <div class="container"></div>
+  <script>
+    function circles() {
+      let container = document.getElementsByClassName('container')[0];
+      for (let i = 1; i <= 50; i++) {
+        container.innerHTML += '<div class="circle" style="animation: circle 10s ease-in-out ' + (i / -4) + 's infinite both"></div>';
+      }
+    }
+    circles()
+  </script>
+</body>
+
+</html>
