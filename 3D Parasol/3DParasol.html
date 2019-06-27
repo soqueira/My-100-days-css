@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3D Parasol</title>
+    <link rel="stylesheet" href="3DParasol.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="parasol">
+            <div class="pole"></div>
+            <div class="shadow_pole"></div>
+            <div class="top"></div>
+            <div class="shadow_top">
+                <div class="shadow">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function parasol() {
+            let topDiv = document.getElementsByClassName('top')[0];
+            let shadow = document.getElementsByClassName('shadow')[0];
+            let nullbase;
+            let degree;
+            for (let i = 0; i < 12; i++) {
+                nullbase = i - 1;
+                degree = (360 / 12) * nullbase;
+                topDiv.innerHTML += '<div class="triangle" style="transform: rotateZ(' + degree + 'deg) rotateX(-24deg) translateY(-1px)"></div>';
+                shadow.innerHTML += '<div class="triangle" style="transform: rotateZ(' + degree + 'deg) rotateX(-24deg)"></div>';
+            }
+        }
+        parasol()
+    </script>
+</body></html>
