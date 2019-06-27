@@ -1,0 +1,70 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: black;
+  overflow: hidden;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkbox {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.checkbox input {
+  display: none;
+}
+
+.checkbox .toggle {
+  position: relative;
+  z-index: 5;
+  display: block;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 2px 4px 0 rgba(0, 0, 0, 0);
+}
+
+.checkbox input:checked~.toggle {
+  border-width: 14px;
+  background: #5FD17A;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 2px 4px 0 rgba(0, 0, 0, 0);
+}
+
+.sparkles {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: 0;
+}
+
+.sparkle {
+  position: absolute;
+  width: 2px;
+  height: 16px;
+  top: 12px;
+  left: 19px;
+  background: #fff;
+  transition: none;
+}
