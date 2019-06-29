@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700,400');
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: black;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  user-select: none;
+  overflow: hidden;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #512626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 200px 200px;
+}
+
+.card {
+  background: #E27474;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.card:nth-child(4) {
+  background: #e66060;
+}
+
+span {
+  margin: 0;
+  padding: 0;
+}
+
+.week {
+  font-size: 20px;
+}
+
+.day {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.card:hover {
+  transform: scale(.95);
+  box-shadow: inset 2px 2px 4px -1px rgba(0, 0, 0, 0.25);
+  transition: .3s ease-in-out;
+}
