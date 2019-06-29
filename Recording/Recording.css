@@ -1,0 +1,163 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #684595;
+  user-select: none;
+  overflow: hidden;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container input {
+  display: none
+}
+
+.container label {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.mic {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mic svg {
+  fill: none;
+  stroke-linecap: round;
+  position: absolute;
+}
+
+.circle {
+  stroke: #fff;
+  stroke-width: 5px;
+  width: 100px;
+  height: 100px;
+  transform-origin: 50% 50%;
+}
+
+.microphone {
+  width: 70px;
+  height: 70px;
+}
+
+.dots {
+  width: 70px;
+  height: 30px;
+  display: grid;
+  grid-template-columns: 10px 10px 10px;
+  grid-template-rows: 10px;
+  grid-gap: 10px;
+  justify-content: center;
+  align-content: center;
+  opacity: 0;
+}
+
+.dots .dot {
+  background: #fff;
+  border-radius: 50%;
+}
+
+.container input:checked~.mic .circle {
+  animation: circle 5s ease-in-out infinite both;
+}
+
+.container input:checked~.mic .microphone {
+  animation: icon .7s ease-in-out both;
+}
+
+.container input:checked~.mic .dots {
+  animation: dots 1s ease-in-out both;
+}
+
+.container input:checked~.mic .dots .dot:nth-child(1) {
+  animation: dot 1s ease-in-out infinite;
+}
+
+.container input:checked~.mic .dots .dot:nth-child(2) {
+  animation: dot 1s ease-in-out infinite;
+  animation-delay: .2s;
+}
+
+.container input:checked~.mic .dots .dot:nth-child(3) {
+  animation: dot 1s ease-in-out infinite;
+  animation-delay: .4s;
+}
+
+@keyframes circle {
+  0% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 296 296;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    stroke-dashoffset: -592;
+    stroke-dasharray: 296 296;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes icon {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  30% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes dots {
+
+  0%,
+  60% {
+    transform: translateY(-10px)scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0)scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes dot {
+  0% {
+    transform: translateY(5px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(5px)
+  }
+}
