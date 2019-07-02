@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #1abc9c;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: none;
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.2) translateY(-5px);
+}
+
+.button::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  transform: scale(0);
+  z-index: -1;
+  transition: .3s ease-in-out;
+}
+
+#input-1:checked~.button-1 {
+  color: #1abc9c;
+}
+
+#input-1:checked~.button-1:before {
+  transform: scale(1);
+}
+
+#input-2:checked~.button-2 {
+  color: #1abc9c;
+}
+
+#input-2:checked~.button-2:before {
+  transform: scale(1);
+}
+
+#input-3:checked~.button-3 {
+  color: #1abc9c;
+}
+
+#input-3:checked~.button-3:before {
+  transform: scale(1);
+}
+
+#input-4:checked~.button-4 {
+  color: #1abc9c;
+}
+
+#input-4:checked~.button-4:before {
+  transform: scale(1);
+}
