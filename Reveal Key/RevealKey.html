@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> Reveal Key </title>
+  <link rel="stylesheet" href="RevealKey.css">
+</head>
+
+<body>
+  <div class="container">
+    <input type="text" placeholder="Enter 'password'">
+    <div class="key">
+      <div class="title">Secret Key</div>
+      <div class="keycode">MD5-SU3-CX8</div>
+    </div>
+  </div>
+
+  <script>
+    function pass() {
+      let input = document.getElementsByTagName('input')[0];
+      let title = document.getElementsByClassName('title')[0];
+      let keycode = document.getElementsByClassName('keycode')[0];
+      let key = document.getElementsByClassName('key')[0];
+      input.onkeyup = () => {
+        let inputText = input.value.toLocaleLowerCase();
+        if (inputText == 'password') {
+          key.style.cssText = 'visibility: visible';
+          title.style.cssText = 'transform: translateY(0); opacity: 1';
+          keycode.style.cssText = 'transform: translateY(0); opacity: 1;';
+        }
+      }
+    }
+    pass()
+  </script>
+</body>
+
+</html>
