@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> Lines Animation </title>
+  <link rel="stylesheet" href="LinesAnimation.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="center"></div>
+  </div>
+  <script>
+    function lines() {
+      let container = document.getElementsByClassName('center')[0];
+      for (let i = 1; i <= 10; i++) {
+        container.innerHTML += '<div class="line line-' + i + '"></div>'
+      }
+    }
+    lines()
+  </script>
+</body>
+
+</html>
