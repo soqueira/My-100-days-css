@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title> It's something </title>
+        <link rel="stylesheet" href="It'ssomething.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="wave"></div>
+        </div>
+        <script>
+            let wave = document.getElementsByClassName('wave')[0];
+            for(let i = 1; i <= 200; i++){
+                wave.innerHTML += '<div class="dot dot-'+i+'"></div>'
+            }
+        </script>
+    </body>
+</html>
